@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+*{
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root{
+    --text_cor: #191823;
+    --verde_claro: #6CFA8C;
+    --verde_escuro: #23A26D;
+    --verde_escuro2: #063D38;
+    --verde_button: #99b942;
+    --azul_animation_button: #A4EBE5;
+}
+
+body{
+    width: 100vw; height: 100vh;
+    background: #eee no-repeat center/cover fixed;
+}
+
+main{
+    overflow: hidden;
+    position: relative;
+}
+
+header{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    box-shadow: 0px 2px 12px rgb(0, 0, 0, .4);
+    padding: .5rem 1rem;
+    z-index: 2;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.nav_logo{
+    width: 70px;
+    height: 70px;
+}
+
+.nav_list{
+    list-style-type: none;
+}
+
+.nav_list{
+    position: absolute;
+    top: 5.9rem;
+    right: 0;
+    z-index: 3;
+    background: rgb(6, 61, 56, .9);
+    height: 100vh;
+    width: 0%;
+    overflow: hidden;
+
+    box-shadow: 0 0 5px rgb(0, 0, 0, .4);
+    transition: .2s;
+}
+
+
+.active .nav_list{
+    width: 100%;
+    padding: 1rem;
+    border: 1px solid  var(--verde_escuro);
+}
+
+.nav_list .nav_item a{
+    display: block;
+    text-decoration: none;
+    color: #eee;
+    font-size: 1.3rem;
+    margin: 1.5rem 0;
+    font-weight: 600;
+}
+
+.hamburguer_container{
+    cursor: pointer;
+    width: 60px; height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu_hambuerguer{
+    border-bottom: 4px solid var(--text_cor);
+    width: 80%;
+}
+
+.menu_hambuerguer::after, .menu_hambuerguer::before{
+    content: "";
+    width: 100%;
+    display: block;
+    margin: .5rem 0;
+    border-bottom: 4px solid var(--text_cor);
+    transition: .3s;
+}
+
+.active .menu_hambuerguer{
+        border-bottom: none;
+}
+
+.active .menu_hambuerguer::before{
+    transform: rotate(230deg);
+}
+
+.active .menu_hambuerguer::after{
+    transform: rotate(-45deg);
+    position: relative;
+    top: -.7rem;
+}
+
+.social{
+    display: flex;
+    list-style-type: none;
+    font-size: 2.1rem;
+    gap: 0rem;
+    margin-right: 1.5rem;
+}
+
+.social_link{
+    color: var(--text_cor);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+}
+
+.headline{
+    height: 100vh;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    overflow: hidden;
+}
+
+.headline_text{
+ padding: .5rem;  
+}
+
+.headline_logo h2{
+    color: var(--verde_escuro);
+    text-transform: uppercase;
+    font-size: 1rem;
+    font-weight: 800;
+}
+
+.headline_logo img{
+    width: 20rem;
+}
+
+.headline_text p{
+    text-align: center;
+    margin: 0 auto;
+    padding: .5rem 1rem;
+    border-radius: 1rem;
+    color: #34A5BE;
+    font-weight: 600;
+    text-shadow: 1px 0 var(--verde_claro),
+                 -1px 0 var(--verde_claro),
+                 0 1px var(--verde_claro),
+                0 -1px var(--verde_claro)
+}
+
+.box_img{
+    border: 1rem solid var(--verde_escuro);
+    height: 300px;
+    display: block;
+    margin: 0 auto;
+    width: 300px;
+    transform: rotate(40deg);
+    position: relative;
+}
+
+.headline_img a{
+    transform: rotate(-40deg);
+    position: absolute;
+    left: 10rem;
+    bottom: 0;
+    text-decoration: none;
+    background: var(--verde_claro);
+    color: var(--verde_escuro);
+    padding: .6rem 4rem; 
+    font-size: 1.3rem;
+    border-radius: 2rem;
+    box-shadow: 0 0 0.5rem rgb(0, 0, 0, .4);
+    border: 2px solid var(--verde_escuro);
+    text-transform: uppercase;
+}
+
+.headline_img img{
+    transform: rotate(-40deg);
+    width: 210px;
+    display: block;
+    margin: 0 auto;
+}
+
+.quadrado{
+    position: absolute;
+    width: 500px; height: 500px;
+    bottom: -10rem;
+    transform: rotate(40deg);
+    z-index: -1;
+    background: url("../img/portal.png") no-repeat center/cover;
+}

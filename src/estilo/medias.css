@@ -1,0 +1,128 @@
+@media screen and (min-width: 560px) {
+
+    :root{
+        --text_cor: #191823;
+        --verde_claro: #6CFA8C;
+        --verde_escuro: #23A26D;
+        --verde_escuro2: #063D38;
+        --verde_button: #99b942;
+        --azul_animation_button: #A4EBE5;
+    }
+
+    *{
+        transition: .2s;
+    }
+
+    .social{
+        gap: 1.5rem;
+    }
+
+    .social-item{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 50px;
+        width: 50px;
+        transform: rotate(40deg);
+    }
+
+    .social_link{
+        margin-top: 10px;
+        margin-left: 9px;
+        transform: rotate(-40deg);
+        font-size: 2.5rem;
+    }
+
+    .social-item:hover{
+        padding: 1rem;
+        border: 2px solid var(--verde_escuro);
+    }
+
+    .headline{
+        padding-top: 50px;
+    }
+
+    .headline_logo h2{
+        font-size: 1.5rem;
+    }
+
+    .headline_logo img{
+        width: 30rem;
+    }
+
+    .headline_text p{
+        font-size: 1.1rem;
+    }
+
+    .box_img{
+        height: 380px; width: 380px;
+        bottom: -4rem;
+        margin-bottom: 5rem;
+    }
+
+    .headline_img img{
+        width: 300px;
+    }
+
+    .headline_img a{  
+        left: 1rem;
+        right: 0;
+        text-align: center;
+    }
+
+    .headline_img a:hover{
+        border-color: var(--verde_claro);
+        background: var(--verde_escuro);
+        color: var(--verde_claro);
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .headline_text p{
+        font-size: 1.5rem;
+        width: 60rem;
+    }
+
+    .headline_img img{
+        position: relative;
+        bottom: 13rem;
+        width: 600px;
+    }
+
+    .quadrado{
+        width: 700px; height: 700px;
+        right: 35rem;
+    }
+
+    .hamburguer_container{
+        display: none;
+    }
+
+    .active .nav_list{
+        border: none;
+    }
+
+    .nav_list{
+        background: transparent;
+        box-shadow: none;
+        top: 0;
+        position: relative;
+        display: inline;
+        height: auto;
+        width: auto;
+        display: flex;
+        flex-flow: row;
+        gap: 2rem;
+    }
+
+    .nav_list .nav_item a{
+        font-size: 1.5rem;
+        display: inline;
+        color: #191823;
+    }
+
+    .nav_list .nav_item a:hover{
+        color: var(--verde_escuro);
+    }
+
+}
